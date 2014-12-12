@@ -14,6 +14,7 @@ Raw ideas of usage/test cases:
 * all dishes to be only in one examplar or not?
 * >record about choosing contains timestamp/day of time stamp, link to the ?list? of dishes
 * small db that contains dishes, link by uniq ID
+* tags only in 'base' dish object structure, in nosql/mongodb. such things like 'time of the day' to be implemented as not tag mechanism (enum/flags)
 
 
 #### technologies:
