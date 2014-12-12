@@ -19,5 +19,5 @@ Raw ideas of usage/test cases:
 #### technologies:
 * mongodb for 'dish' uniq examplar description
 * for records of concrete meals: postgresql/mysql
-* users/templates preferences/settings(of tags): redis?
+* users/templates preferences/settings(of tags. like only vegeterian food): redis?
 * javafx for gui
