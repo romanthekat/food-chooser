@@ -17,5 +17,7 @@ Raw ideas of usage/test cases:
 
 
 #### technologies:
-* mongodb for 'dish' uniq description
-* postgresql/mysql/redis for records of concrete meals
+* mongodb for 'dish' uniq examplar description
+* for records of concrete meals: postgresql/mysql
+* users/templates preferences/settings(of tags): redis?
+* javafx for gui
