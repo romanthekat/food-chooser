@@ -1,0 +1,16 @@
+Raw ideas of usage/test cases:
+====================
+1. user opens app
+2. chooses 'type' of food/moment of time, e.g. breakfast/lunch
+3. he gets list of hypothetical variants
+4. additional params/tags of choosing can be defined, like 'meat' or 'vegeterian' that leads to variants filtration
+5. on demand list of already eaten things of this day/week/etc time period can be obtained
+6. after choosing choice to be saved
+
+### Pure thoughts:
++ filtration by tags/time of day(day of time is tag too?)/type of food
+#### tags:
+* type of food is 'dish' specific tag, and it's coommon for every examplar of dish
+* all dishes to be only in one examplar or not?
+* >record about choosing contains timestamp/day of time stamp, link to the ?list? of dishes
+* small db that contains dishes, link by uniq ID
