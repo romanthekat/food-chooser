@@ -11,13 +11,13 @@ import java.util.function.Function;
  * Created by evilkhaoskat on 13.12.14.
  */
 public class Dish {
-    String name;
+    String name = "";
     public static final String DISH_NAME = "name";
 
-    String description;
+    String description = "";
     public static final String DISH_DESCRIPTION = "description";
 
-    List<String> tags;
+    List<String> tags = Collections.emptyList();
     public static final String DISH_TAGS = "tags";
 
     public Dish() {}
@@ -60,5 +60,14 @@ public class Dish {
 
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", tags=" + tags +
+                '}';
     }
 }
