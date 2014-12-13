@@ -6,9 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple Main.
  */
-public class AppTest
+public class MainTest
 {
     @Test
     public void testSomething() {

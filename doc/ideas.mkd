@@ -15,10 +15,11 @@ Raw ideas of usage/test cases:
 * >record about choosing contains timestamp/day of time stamp, link to the ?list? of dishes
 * small db that contains dishes, link by uniq ID
 * tags only in 'base' dish object structure, in nosql/mongodb. such things like 'time of the day' to be implemented as not tag mechanism (enum/flags)
-
+* need an ability to make printable report about previous weeks/new week plan (pdf?)
 
 #### technologies:
 * mongodb for 'dish' uniq examplar description
 * for records of concrete meals: postgresql/mysql
 * users/templates preferences/settings(of tags. like only vegeterian food): redis?
 * javafx for gui
+* junit and mockito for unit testing
