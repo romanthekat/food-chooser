@@ -1,11 +1,13 @@
 package com.evilkhaoskat.meaningless_food_chooser.dish;
 
+import com.mongodb.BasicDBList;
 import com.mongodb.DBObject;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Created by evilkhaoskat on 13.12.14.
@@ -31,8 +33,10 @@ public class Dish {
     public static Function<DBObject, Dish> getDishDBDishPojoMapper() {
         return x ->
         {
-            String rawTags = (String) x.get(DISH_TAGS);
-            List<String> tags = Arrays.asList(rawTags.split(","));
+            BasicDBList rawTags = (BasicDBList) x.get(DISH_TAGS);
+            List<String> tags = rawTags != null ?
+                    rawTags.stream().map(Object::toString).collect(Collectors.toList()) :
+                    Collections.emptyList();
 
             return new Dish((String)x.get(DISH_NAME), (String)x.get(DISH_DESCRIPTION), tags);
         };

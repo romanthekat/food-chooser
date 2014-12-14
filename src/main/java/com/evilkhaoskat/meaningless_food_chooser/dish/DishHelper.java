@@ -35,6 +35,9 @@ public class DishHelper {
         return Collections.emptyList();
     }
 
+    //yeah, that would be cool to use some ORM/ODM like mongolink or morphia
+    //but that leads to zero using of mongodb itself in that situation
+    //whole project was made for using several technologies at least somehow
     private static List<Dish> getDishesByDB(DB dishesDb) {
         DBCollection dishesDBCollection = dishesDb.getCollection(DISHES_COLLECTION);
         DBCursor dishesCursor = dishesDBCollection.find();
