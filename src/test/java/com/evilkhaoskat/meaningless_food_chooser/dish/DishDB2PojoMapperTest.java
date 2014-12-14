@@ -2,6 +2,7 @@ package com.evilkhaoskat.meaningless_food_chooser.dish;
 
 import com.mongodb.BasicDBList;
 import com.mongodb.DBObject;
+import org.bson.types.ObjectId;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class DishDB2PojoMapperTest {
 
     @Test
     public void testDishDB2PojoMapper() {
+        String dishId = "000000000000000000000000"; //'valid' object id for ObjectId initiation. looks awful. TODO make smth with it
         String dishName = "Awesome dish";
         String dishDescription = "Made of awesomeness!";
         //String dishTags = "awesome,cool,great";
@@ -29,6 +31,7 @@ public class DishDB2PojoMapperTest {
         dishTagsDBList.add("great");
 
         DBObject dbDishObject = mock(DBObject.class);
+        when(dbDishObject.get(Dish.ID)).thenReturn(new ObjectId(dishId));
         when(dbDishObject.get(Dish.DISH_NAME)).thenReturn(dishName);
         when(dbDishObject.get(Dish.DISH_DESCRIPTION)).thenReturn(dishDescription);
         when(dbDishObject.get(Dish.DISH_TAGS)).thenReturn(dishTagsDBList);
@@ -41,6 +44,7 @@ public class DishDB2PojoMapperTest {
 
         Dish dish = dishes.get(0);
 
+        //TODO use equals between exemplars of objects?
         assertEquals(dish.getName(), dishName);
         assertEquals(dish.getDescription(), dishDescription);
 

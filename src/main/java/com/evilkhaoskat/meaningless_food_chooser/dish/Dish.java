@@ -92,4 +92,28 @@ public class Dish {
                 ", tags=" + tags +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Dish dish = (Dish) o;
+
+        if (!description.equals(dish.description)) return false;
+        if (!id.equals(dish.id)) return false;
+        if (!name.equals(dish.name)) return false;
+        if (!tags.equals(dish.tags)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + name.hashCode();
+        result = 31 * result + description.hashCode();
+        result = 31 * result + tags.hashCode();
+        return result;
+    }
 }
