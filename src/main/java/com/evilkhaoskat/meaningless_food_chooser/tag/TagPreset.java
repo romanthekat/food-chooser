@@ -1,6 +1,6 @@
 package com.evilkhaoskat.meaningless_food_chooser.tag;
 
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
