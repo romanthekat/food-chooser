@@ -18,3 +18,4 @@ meaningless_food_chooser.iml
 # maven target directory
 target/
 
+.idea
