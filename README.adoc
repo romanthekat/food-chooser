@@ -1,0 +1,45 @@
+= WIP food_chooser
+
+Food chooser helps you to plan dishes cooking.
+
+== Prerequisites
+
+TBD
+
+== Tech details
+
+=== High level plan
+
+- [*] Java 11 app
+- [*] PostgreSQL DB
+- [*] DB migrations
+- [*] OpenAPI/Swagger integration
+- [ ] JWT-token authentication
+- [ ] Signing up
+- [ ] Dish REST
+- [ ] Docker image
+- [ ] Docker swarm
+
+=== Local run
+
+`mvn spring-boot:run -Dspring-boot.run.profiles=postgresql,local`
+
+=== API
+
+http://localhost:8080/swagger-ui.html
+
+=== Spring profiles
+
+There are two main profiles blocks: functionality and environment.
+
+Generally one should set required functionality set, then apply environment.
+
+==== Functionality
+
+- `postgresql` - setups postgresql connection
+
+==== Environments
+
+- `local` - local/develop setup: more logs, OpenAPI/Swagger, local postgresql with default settings, etc.
+Requires `food-chooser` schema created in DB.
+
