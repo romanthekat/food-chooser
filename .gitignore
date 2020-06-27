@@ -13,9 +13,7 @@ hs_err_pid*
 
 # idea project files
 .idea/
-meaningless_food_chooser.iml
+*.iml
 
 # maven target directory
 target/
-
-.idea
